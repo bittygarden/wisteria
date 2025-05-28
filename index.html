@@ -27,6 +27,7 @@
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             min-height: 100vh;
+            line-height: 1.5;
         }
 
         .container {
@@ -42,7 +43,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-   
         ul {
             list-style-type: none;
             padding: 0;
@@ -52,9 +52,9 @@
             gap: 10px;
             align-items: flex-start;
             margin-top: 10px;
-            /* 设置统一的顶部外边距 */
-            /* 新增属性，让 li 元素自动换行 */
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
+            gap: 5px;
+            min-width: 150px;
         }
 
         /* 第一个 ul 元素的顶部外边距需要特殊处理 */
@@ -65,6 +65,11 @@
         li {
             margin-bottom: 10px;
             min-width: fit-content;
+        }
+
+        /* ul元素的第一个li特殊处理 */
+        .container ul li:first-of-type {
+            margin-right: 10px;
         }
 
         a {
@@ -107,7 +112,27 @@
 <body>
     <div class="container">
         <ul>
-            <li><a href="tools/other/ascii/index.html" target="_blank" rel="noopener noreferrer">ASCII 码</a></li>
+            <li><a href="tools/other/ascii/index.html" target="_blank" rel="noopener noreferrer">AI视频：</a></li>
+            <li><a href="https://app.pixverse.ai/home" target="_blank" rel="noopener noreferrer">Pixverse</a></li>
+            <li><a class="issues" href="https://github.com/bittygarden/wisteria/issues" target="_blank"
+                    rel="noopener noreferrer">提建议</a>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="tools/other/ascii/index.html" target="_blank" rel="noopener noreferrer">AI语音：</a></li>
+            <li><a class="issues" href="https://github.com/bittygarden/wisteria/issues" target="_blank"
+                    rel="noopener noreferrer">提建议</a>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="tools/other/ascii/index.html" target="_blank" rel="noopener noreferrer">AI图片：</a></li>
+            <li><a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer">Midjourney</a></li>
+            <li><a class="issues" href="https://github.com/bittygarden/wisteria/issues" target="_blank"
+                    rel="noopener noreferrer">提建议</a>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="tools/other/ascii/index.html" target="_blank" rel="noopener noreferrer">AI聊天：</a></li>
             <li><a class="issues" href="https://github.com/bittygarden/wisteria/issues" target="_blank"
                     rel="noopener noreferrer">提建议</a>
             </li>
