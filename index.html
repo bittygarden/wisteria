@@ -114,16 +114,44 @@
             color: #ffffff;
             background-color: #FFA99F;
         }
+
+        /* 新增提示框样式 */
+        .tooltip {
+            position: absolute;
+            background: #ffffff;
+            border: 1px solid #FFA99F;
+            padding: 8px 12px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 14px;
+            color: #333;
+            pointer-events: none;
+            display: none;
+            z-index: 1000;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <!-- 修改示例data-description为多行内容 -->
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI视频</a></li>
-            <li><a href="https://app.pixverse.ai/home" target="_blank" rel="noopener noreferrer"><img src="/icon/pixverse.svg" alt="">Pixverse</a></li>
-            <li><a href="https://chatglm.cn/video?lang=zh" target="_blank" rel="noopener noreferrer"><img src="/icon/chatglm.ico" alt="">智谱清言</a></li>
-            <li><a href="https://web.descript.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/descript.png" alt="">Descript</a></li>
+            <li data-description="专注于AI视频生成的工具，支持快速创建高质量视频内容，内置多种风格模板" class="has-tooltip">
+                <a href="https://app.pixverse.ai/home" target="_blank" rel="noopener noreferrer">
+                    <img src="/icon/pixverse.svg" alt="">Pixverse
+                </a>
+            </li>
+            <li data-description="智谱AI推出的多模态视频对话工具，支持视频内容交互" class="has-tooltip">
+                <a href="https://chatglm.cn/video?lang=zh" target="_blank" rel="noopener noreferrer">
+                    <img src="/icon/chatglm.ico" alt="">智谱清言
+                </a>
+            </li>
+            <li data-description="AI驱动的视频编辑工具，支持自动生成视频文案和剪辑" class="has-tooltip">
+                <a href="https://web.descript.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/icon/descript.png" alt="">Descript
+                </a>
+            </li>
         </ul>
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI语音</a></li>
@@ -151,6 +179,48 @@
             <li><a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/cursor.ico" alt="">Cursor</a></li>
         </ul>
     </div>
+
+    <!-- 新增JavaScript交互代码 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lis = document.querySelectorAll('.container li.has-tooltip');
+            
+            lis.forEach(li => {
+                let tooltip;
+                
+                li.addEventListener('mouseenter', (e) => {
+                    const description = li.dataset.description;
+                    if (!description) return;
+
+                    tooltip = document.createElement('div');
+                    tooltip.className = 'tooltip';
+                    // 将换行符转换为HTML换行标签
+                    tooltip.innerHTML = description.replace(/\n/g, '<br>'); 
+                    document.body.appendChild(tooltip);
+                    
+                    updateTooltipPosition(e);
+                    tooltip.style.display = 'block';
+                });
+
+                li.addEventListener('mousemove', updateTooltipPosition);
+
+                li.addEventListener('mouseleave', () => {
+                    if (tooltip) {
+                        tooltip.remove();
+                        tooltip = null;
+                    }
+                });
+
+                function updateTooltipPosition(e) {
+                    // 鼠标位置+偏移量（避免遮挡指针）
+                    const x = e.clientX + 15;
+                    const y = e.clientY + 15;
+                    tooltip.style.left = `${x}px`;
+                    tooltip.style.top = `${y}px`;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
