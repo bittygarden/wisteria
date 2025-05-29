@@ -86,10 +86,14 @@
 
         /* 添加图标样式 */
         a img {
-            width: 16px;          /* 图标宽度 */
-            height: 16px;         /* 图标高度 */
-            margin-right: 5px;    /* 图标与文字间距 */
-            vertical-align: middle; /* 垂直居中对齐 */
+            width: 16px;
+            /* 图标宽度 */
+            height: 16px;
+            /* 图标高度 */
+            margin-right: 5px;
+            /* 图标与文字间距 */
+            vertical-align: middle;
+            /* 垂直居中对齐 */
         }
 
         a:hover {
@@ -118,18 +122,20 @@
         /* 新增提示框样式 */
         .tooltip {
             position: absolute;
-            background: #ffffff;
+            background-image: linear-gradient(to right, rgb(255, 236, 210) 0%, rgb(252, 182, 159) 100%);
             border: 1px solid #FFA99F;
             padding: 8px 12px;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             font-size: 14px;
             color: #333;
             pointer-events: none;
             display: none;
             z-index: 1000;
-            max-width: 500px; /* 新增最大宽度限制 */
-            word-wrap: break-word; /* 允许长单词换行 */
+            max-width: 500px;
+            /* 新增最大宽度限制 */
+            word-wrap: break-word;
+            /* 允许长单词换行 */
         }
     </style>
 </head>
@@ -139,7 +145,8 @@
         <!-- 修改示例data-description为多行内容 -->
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI视频</a></li>
-            <li data-description="通过文本提示或上传图片（包括自拍、肖像、集体照等）生成动态视频，支持应用 AI 特效（如人物动作、场景变换），将静态图像转化为吸引眼球的视频内容。" class="has-tooltip">
+            <li data-description="通过文本提示或上传图片（包括自拍、肖像、集体照等）生成动态视频，支持应用 AI 特效（如人物动作、场景变换），将静态图像转化为吸引眼球的视频内容。"
+                class="has-tooltip">
                 <a href="https://app.pixverse.ai/home" target="_blank" rel="noopener noreferrer">
                     <img src="/icon/pixverse.svg" alt="">Pixverse
                 </a>
@@ -157,28 +164,41 @@
         </ul>
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI语音</a></li>
-            <li><a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/notebooklm.svg" alt="">NotebookLM</a></li>
-            <li><a href="https://elevenlabs.io/app/speech-synthesis/text-to-speech" target="_blank" rel="noopener noreferrer"><img src="/icon/elevenlabs.svg" alt="">ElevenLabs</a></li>
+            <li><a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/notebooklm.svg" alt="">NotebookLM</a></li>
+            <li><a href="https://elevenlabs.io/app/speech-synthesis/text-to-speech" target="_blank"
+                    rel="noopener noreferrer"><img src="/icon/elevenlabs.svg" alt="">ElevenLabs</a></li>
         </ul>
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI图片</a></li>
-            <li><a href="https://www.doubao.com/chat/create-image" target="_blank" rel="noopener noreferrer"><img src="/icon/doubao.png" alt="">豆包</a></li>
-            <li><a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/midjourney.png" alt="">Midjourney</a></li>
-            <li><a href="https://huggingface.co/spaces/TheEeeeLin/HivisionIDPhotos" target="_blank" rel="noopener noreferrer"><img src="/icon/huggingface.ico" alt="">AI证件照</a></li>
-            <li><a href="https://qrbtf.com/zh/style/a1c" target="_blank" rel="noopener noreferrer"><img src="https://qrbtf.com/favicon.ico" alt="">二维码</a></li>
+            <li><a href="https://www.doubao.com/chat/create-image" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/doubao.png" alt="">豆包</a></li>
+            <li><a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/midjourney.png" alt="">Midjourney</a></li>
+            <li><a href="https://huggingface.co/spaces/TheEeeeLin/HivisionIDPhotos" target="_blank"
+                    rel="noopener noreferrer"><img src="/icon/huggingface.ico" alt="">AI证件照</a></li>
+            <li><a href="https://qrbtf.com/zh/style/a1c" target="_blank" rel="noopener noreferrer"><img
+                        src="https://qrbtf.com/favicon.ico" alt="">二维码</a></li>
         </ul>
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI聊天</a></li>
-            <li><a href="https://www.doubao.com/chat/" target="_blank" rel="noopener noreferrer"><img src="/icon/doubao.png" alt="">豆包</a></li>
-            <li><a href="https://grok.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/grok.png" alt="">Grok</a></li>
-            <li><a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer"><img src="/icon/gemini.svg" alt="">Gemini</a></li>
-            <li><a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/deepseek.ico" alt="">DeepSeek</a></li>
-            <li><a href="https://yuanbao.tencent.com/chat/naQivTmsDa" target="_blank" rel="noopener noreferrer"><img src="/icon/yuanbao.png" alt="">元宝</a></li>
+            <li><a href="https://www.doubao.com/chat/" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/doubao.png" alt="">豆包</a></li>
+            <li><a href="https://grok.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/grok.png"
+                        alt="">Grok</a></li>
+            <li><a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/gemini.svg" alt="">Gemini</a></li>
+            <li><a href="https://chat.deepseek.com/" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/deepseek.ico" alt="">DeepSeek</a></li>
+            <li><a href="https://yuanbao.tencent.com/chat/naQivTmsDa" target="_blank" rel="noopener noreferrer"><img
+                        src="/icon/yuanbao.png" alt="">元宝</a></li>
         </ul>
         <ul>
             <li><a href="" target="_blank" rel="noopener noreferrer">AI编程</a></li>
-            <li><a href="https://www.trae.com.cn/" target="_blank" rel="noopener noreferrer"><img src="/icon/trae.ico" alt="">Trae</a></li>
-            <li><a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/cursor.ico" alt="">Cursor</a></li>
+            <li><a href="https://www.trae.com.cn/" target="_blank" rel="noopener noreferrer"><img src="/icon/trae.ico"
+                        alt="">Trae</a></li>
+            <li><a href="https://www.cursor.com/" target="_blank" rel="noopener noreferrer"><img src="/icon/cursor.ico"
+                        alt="">Cursor</a></li>
         </ul>
     </div>
 
@@ -186,10 +206,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const lis = document.querySelectorAll('.container li.has-tooltip');
-            
+
             lis.forEach(li => {
                 let tooltip;
-                
+
                 li.addEventListener('mouseenter', (e) => {
                     const description = li.dataset.description;
                     if (!description) return;
@@ -197,9 +217,9 @@
                     tooltip = document.createElement('div');
                     tooltip.className = 'tooltip';
                     // 将换行符转换为HTML换行标签
-                    tooltip.innerHTML = description.replace(/\n/g, '<br>'); 
+                    tooltip.innerHTML = description.replace(/\n/g, '<br>');
                     document.body.appendChild(tooltip);
-                    
+
                     updateTooltipPosition(e);
                     tooltip.style.display = 'block';
                 });
